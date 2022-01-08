@@ -1,5 +1,5 @@
 ---
-title: Hello World
+title: Hi, I'm Raquel Vargas
 layout: "base.njk"
 eleventyNavigation:
   key: Home

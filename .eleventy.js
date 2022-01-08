@@ -1,12 +1,28 @@
-module.exports = function (eleventyConfig) {
-  eleventyConfig.addPassthroughCopy("./src/style.css")
-  eleventyConfig.addPlugin(require('@11ty/eleventy-navigation'))
-  eleventyConfig.addShortcode('navlist', require('./lib/shortcodes/navlist.js'));
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight")
+
+module.exports = (config) => {
+  config.addPlugin(syntaxHighlight);
+  config.addPassthroughCopy('src/images');
+  config.addPassthroughCopy({"src/assets": "assets"})
+  config.addPlugin(require('@11ty/eleventy-navigation'));
+  config.setTemplateFormats(["jpg", "png", "webp", "md", "njk"]);
+  config.setBrowserSyncConfig({
+    files: ["dist/**/*"],
+    open: true,
+  });
+  config.setDataDeepMerge(true);
+  // config.setFrontMatterParsingOptions({
+  //   excerpt: true,
+  //   excerpt_separator: "<!-- excerpt -->"
+  // });
+  config.setBrowserSyncConfig({
+		files: './dist/css/**/*.css'
+	});
 
   return {
     dir: {
       input: "src",
-      output: "public",
+      output: "dist",
     }
   }
 }

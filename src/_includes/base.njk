@@ -1,12 +1,19 @@
-{% include "partials/htmlhead.njk" %}
+---
+sitetitle: Raquel Vargas - Front-end developer
+---
 
-<header>
-  <nav>
-    {% navlist collections.all | eleventyNavigation, page, 1%}
-  </nav>
-</header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/css/main.css">
+  <title>{{ sitetitle }}</title>
+</head>
+<body class="flex flex-col min-h-screen font-mono">
+{% include 'header.njk' %}
 
-<main>
+<main class="container flex-grow py-8">
 {% block content %}
 
   <h1>{{ title }}</h1>
@@ -15,5 +22,6 @@
 
 {% endblock %}
 </main>
-
-{% include "partials/htmlfoot.njk" %}
+{% include 'footer.njk' %}
+</body>
+</html>
