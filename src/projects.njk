@@ -1,0 +1,24 @@
+---
+title: Projects
+layout: base.njk
+eleventyNavigation:
+  key: Projects
+  order: 400
+pagination:
+  data: projects
+  size: 50
+  alias: project
+---
+
+<p>Below are a few repos I have in GitHub. Check some of them out if you're so inclined.</p>
+
+<div class="container">
+  {%- for item in project %}
+    {%- if item.description %}
+    <div class="card">
+      <h2><a href="{{item.html_url}}">{{item.name}}</a></h2>
+      <p>{{item.description}}</p>
+    </div>
+    {%- endif %}
+  {%- endfor %}
+</div>

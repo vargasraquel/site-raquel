@@ -1,0 +1,38 @@
+body {
+  font-family: $font;
+  font-size: 16px;
+  color: $color;
+  background: $bg;
+}
+
+a {
+  color: $color;
+  text-decoration: none;
+  background-image: linear-gradient(90deg, $bg, $bg), linear-gradient(90deg, $underline-color, $underline-color);
+  background-size: $underline-block-width $underline-width, 100% $underline-width;
+  background-repeat: no-repeat;
+  background-position-x: calc($underline-block-width * -1), 0;
+  background-position-y: 100%;
+  transition: background-position-x $underline-transition;
+  font-weight: 700;
+}
+
+a:hover {
+  background-image: linear-gradient(90deg, $bg, $bg),
+    linear-gradient(
+      90deg,
+      $underline-color-hover,
+      $underline-color-hover
+    );
+  background-position-x: calc(100% + $underline-block-width), 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  display: inline-block;
+  background-image: linear-gradient(90deg, #fc8a19 0%, #f04d2d 15%, #eb2c62 30%, #c740df 44%, #5587eb 58%, #1bc2db 72%, #0ce0c4 86%, #2ec055 100%);
+  background-size: cover;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}

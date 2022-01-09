@@ -1,0 +1,15 @@
+body {
+  min-height: 100%;
+  width: 60vw;
+  margin: auto;
+
+  @media (max-width: 768px) {
+    width: 100vw;
+  }
+}
+
+main {
+  @media (max-width: 768px){
+    margin: 2rem;
+  }
+}

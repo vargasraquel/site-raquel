@@ -11,10 +11,13 @@ module.exports = (config) => {
     open: true,
   });
   config.setDataDeepMerge(true);
-  // config.setFrontMatterParsingOptions({
-  //   excerpt: true,
-  //   excerpt_separator: "<!-- excerpt -->"
-  // });
+  // future blog configuration re:pagination
+  /* 
+    config.setFrontMatterParsingOptions({
+    excerpt: true,
+    excerpt_separator: "<!-- excerpt -->"
+  });
+  */
   config.setBrowserSyncConfig({
 		files: './dist/css/**/*.css'
 	});
