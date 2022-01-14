@@ -1,6 +1,7 @@
 .site-footer {
   display: flex;
   justify-content: space-between;
+  margin-top: auto;
 
   @media (max-width: 768px) {
     margin: 0 1rem ;

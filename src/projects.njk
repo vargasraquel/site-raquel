@@ -18,6 +18,7 @@ pagination:
     <div class="card">
       <h2><a href="{{item.html_url}}">{{item.name}}</a></h2>
       <p>{{item.description}}</p>
+      {%- if item.homepage %}<p><a href="{{item.homepage}}">See live</a></p>{%- endif %}
     </div>
     {%- endif %}
   {%- endfor %}
