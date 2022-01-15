@@ -5,6 +5,10 @@ body {
   background: $bg;
 }
 
+p {
+  line-height: 1.5rem;
+}
+
 a {
   color: $color;
   text-decoration: none;
@@ -30,7 +34,7 @@ a:hover {
 h1, h2, h3, h4, h5, h6{
   display: inline-block;
   background: rgba(252,15,81,1);
-  background: linear-gradient(90deg, rgba(255,177,55,1) 0%, rgba(255,55,55,1) 11%, rgba(252,15,81,1) 26%, rgba(255,55,212,1) 42%, rgba(177,55,255,1) 58%, rgba(74,130,255,1) 73%, rgba(73,255,233,1) 88%, rgba(89,254,53,1) 100%);
+  background: linear-gradient(90deg, rgba(255,177,55,1) 0%, rgba(255,55,55,1) 20%, rgba(252,15,81,1) 40%, rgba(255,55,212,1) 60%, rgba(177,55,255,1) 80%, rgba(74,130,255,1) 100%); 
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
